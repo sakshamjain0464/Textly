@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Train+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Textly - Convert Your Text To Speech</title>
+</head>
+<body>
+    <h1>TEXTLY</h1>
+    <h2>Convert Your Text To Audio</h2>
+    <div class="input-container">
+        <textarea name="" id="input-text" cols="30" rows="10" placeholder="Enter Your Text"></textarea>
+        <p class="word-count">0/500</p>
+    </div>
+    <div class="settings-container">
+        <div class="volume">
+            <label for="volume-input">Volume</label>
+            <div>
+                <input type="range" min="0" max="10" value="10" step="1" id="volume-input">
+                <p id="volume-indicator">100</p>
+            </div>
+        </div>
+        <div class="rate">
+            <label for="rate-input">Speed</label>
+            <div>
+                <input type="range" min="0.25" max="2" value="1" step="0.25" id="rate-input" />
+                <p id="rate-indicator">1</p>
+            </div>
+        </div>
+    </div>
+    <div class="voice-options">
+        <select name="" id="">
+        </select>
+    </div>
+    <div class="buttons">
+        <div class="play-btn"><p><i class="fa fa-play-circle"></i> Play</p></div> 
+    </div>
+    <footer>
+        <p>Created by - Saksham Jain <a href="https://github.com/sakshamjain0464" target="_blank"><i class="fa fa-github"></i></a> <a href="https://www.linkedin.com/in/saksham-jain-15bab2205/" target="_blank"><i class="fa fa-linkedin"></i></a></p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
+
+
