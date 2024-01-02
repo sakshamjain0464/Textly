@@ -4,14 +4,15 @@ let counter = document.querySelector('p');
 // Word Counter
 inputText.addEventListener('input', () => {
     let input = inputText.value;
-    let words = input.split(' ').length - 1;
-    if(words <= 500){
-        counter.textContent = `${words}/500`;
+    let words = input.split(' ');
+    let wordCount = words.filter((item) => item != "").length
+    if(wordCount <= 500){
+        counter.textContent = `${wordCount}/500`;
     }
     else{
         alert("Do not enter more than 500 words!!");
     }
-    if(!input){
+    if(!input || wordCount == -1){
         counter.textContent = '0/500';
     }
 })
@@ -28,7 +29,7 @@ playBtn.addEventListener('click', () => {
         alert("Enter something in the text box");
     }
     else if(!synthesizer.speaking){
-        speech.text = inputText.value;
+        speech.text = inputText.value.trim();
         speech.voice = (voiceSelect.value)?voices[voiceSelect.value]:voices[0]
         synthesizer.speak(speech);
         document.querySelector('.play-btn>p').innerHTML = '<i class="fa fa-stop"></i> Stop';
